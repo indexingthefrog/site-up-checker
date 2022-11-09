@@ -1,16 +1,15 @@
 import requests
+from requests.exceptions import ConnectionError
 
-global b
 def checkurl(url):
     session = requests.Session()
     try:
         b = session.get(url)
-    except b.exceptions.ConectionError:
+    except Exception:
         return 'bad url'
     if b.status_code == 200: 
         return 'OK'
     else:
         return 'BAD'
 
-
-print(checkurl('https://replit.com')) ## test
+print(checkurl('https://replit.com'))
