@@ -1,5 +1,4 @@
 import requests
-from requests.exceptions import ConnectionError
 
 def checkurl(url):
     session = requests.Session()
@@ -11,5 +10,5 @@ def checkurl(url):
         return 'OK'
     else:
         return 'BAD'
-
-print(checkurl('https://replit.com'))
+    
+checkurl('https://replit.com') ## example website
